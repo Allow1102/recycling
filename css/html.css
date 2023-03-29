@@ -4,6 +4,20 @@
     padding: 0;
 }
 
+        /* 清除浮动 */
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix:after {
+            /* IE6/7专用 */
+            *zoom: 1;
+        }
+
 a {
     text-decoration: none;
 }
@@ -89,6 +103,7 @@ li {
 
 /* nav */
 .nav {
+    position: relative;
     background-color: green;
     text-align: center;
     font-size: 15px;
@@ -121,6 +136,52 @@ li {
 .nav ul li a:hover {
     background-color: #ffc000;
 }
+
+
+
+/* 悬浮下拉菜单 */
+.position {
+    position: relative;
+}
+.position:hover .float-nav {
+ display: block !important;
+ background-color: #fff !important;
+
+}
+
+.float-nav {
+  display: none;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+ width: 162px !important;
+   
+    background-color: black;
+
+}
+
+.float-nav li {
+ 
+    float: none !important;
+    width: 162px;
+    color: #ffffff;
+    line-height: 50px;
+    text-align: center;
+
+    height: 50px;
+
+    background-color: rgb(0, 128, 0);
+
+}
+
+.float-nav li:hover {
+    background-color: rgb(255, 192, 0);
+}
+
+
+
+
+
 
 .banner div {
     background-color: yellow;
@@ -300,19 +361,23 @@ li {
     height: 270px;
     margin-bottom: 18px;
 }
+
 .body3-bottom-right li a {
     width: 218px;
     height: 270px;
     display: inline-block;
     /* 链接转行内块 */
 }
+
 .body3-bottom-right li a:hover {
     background-color: green;
 }
+
 .body3-bottom-right li img {
     width: 218px;
-/* 控制图片大小 */
+    /* 控制图片大小 */
 }
+
 .body3-bottom-right li img:hover {
     width: 230px;
 
@@ -613,17 +678,19 @@ li {
 }
 
 .footer-bottom ul li div {
-  
-  
+
+
 
     color: #f7f7f7;
 }
+
 .footer-bottom ul li div span {
     float: left;
 }
+
 .footer-bottom ul li div img {
     float: left;
-   margin-right: 10px;
+    margin-right: 10px;
     width: 21px;
     height: 21px;
 }
@@ -631,6 +698,7 @@ li {
 .footer-bottom ul li>span {
     color: #f7f7f7;
 }
+
 hr {
     border: 0.5px solid grey;
 }
@@ -638,6 +706,7 @@ hr {
 .lastul li {
     color: #f7f7f7;
 }
+
 .lastul li span {
     color: #f7f7f7;
 
